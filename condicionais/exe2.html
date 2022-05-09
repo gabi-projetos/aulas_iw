@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <h1>
+        Organização Tabajara
+    </h1>
+    <div id="resultado"></div>
+    <script>
+        
+        var salario = parseFloat(prompt("Organização Tabajara \n Digite seu salário:"))
+        var ajuste = salario
+        var porcentagem = ""
+        var res = document.querySelector('div#resultado')
+
+        if (ajuste <= 280) {
+            ajuste = ajuste + (ajuste*0.20)
+        }
+        else if ((ajuste >= 280) && (ajuste <= 700)) {
+            ajuste = ajuste + (ajuste*0.15)
+        }
+        else if ((ajuste >= 700) && (ajuste <= 1500)) {
+            ajuste = ajuste + (ajuste*0.10)
+        }
+        else if (ajuste >= 1500) {
+            ajuste = ajuste + (ajuste*0.05)
+        }
+        
+        if (ajuste >= 1500) {
+            porcentagem = "5%"
+        }
+        else if ((ajuste > 700) && (ajuste <= 1500)) {
+            porcentagem = "10%"
+        }
+        else if ((ajuste > 280) && (ajuste <= 700)) {
+            porcentagem = "15%"
+        }
+        else if (ajuste <= 280) {
+            porcentagem = "20%"
+        }
+        
+        var aumento = ajuste - salario
+        res.innerHTML = `<p>Seu salário antes: R$ ${salario} <br> Percentual de aumento: ${porcentagem} <br> Valor aumentado: R$ ${aumento} <br> Novo salário: R$ ${ajuste}</p>`
+        
+       
+    </script>
+    
+</body>
+</html>
