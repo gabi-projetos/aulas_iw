@@ -1,0 +1,12 @@
+
+body{
+    background-color: rgb(75, 120, 243);
+}
+
+.conteudo{
+    margin-top: 15%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
